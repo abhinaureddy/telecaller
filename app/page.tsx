@@ -221,12 +221,6 @@ export default function HomePage() {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </Button>
-                <Link
-                  href="#demo"
-                  className="text-[var(--text-muted-dark)] hover:text-white text-sm underline underline-offset-4 decoration-[var(--text-muted-dark)]/40"
-                >
-                  Listen to a live AI call →
-                </Link>
               </div>
 
               <div className="flex flex-wrap gap-2.5">
@@ -452,65 +446,6 @@ export default function HomePage() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* DEMO */}
-      <section
-        id="demo"
-        className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden"
-      >
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="eyebrow text-[var(--text-muted-dark)] mb-5">The demo</p>
-            <h2 className="display-l text-white mb-5">
-              Hear our AI handle a real call.
-            </h2>
-            <p className="text-[var(--text-muted-dark)]">
-              60 seconds · Inbound inquiry · Customer switches between Hindi and English ·
-              No edits, no tricks
-            </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <div
-              className="p-[2px] rounded-2xl gradient-brand"
-              style={{ boxShadow: "0 30px 80px -30px rgba(128,32,144,0.35)" }}
-            >
-              <div className="bg-[var(--bg-dark-alt)] rounded-[calc(1rem-2px)] p-8 md:p-10">
-                <audio
-                  controls
-                  src="/demo-audio.mp3"
-                  className="w-full"
-                  preload="none"
-                  aria-label="Demo call audio"
-                >
-                  Your browser does not support the audio element.
-                </audio>
-                <p className="mt-5 text-sm text-[var(--text-muted-dark)] leading-relaxed">
-                  Demo audio loading — if the player is empty, drop a file at{" "}
-                  <code className="font-mono text-white/70">public/demo-audio.mp3</code>{" "}
-                  or book a demo to hear it live.
-                </p>
-              </div>
-            </div>
-
-            <p className="mt-8 text-[var(--text-muted-dark)] text-center leading-relaxed">
-              This is the Inbound Receptionist. In a real deployment, your AI agent sounds
-              like <span className="italic text-white">your</span> business — your tone,
-              your scripts, your brand name. We customize every agent for the client.
-            </p>
-
-            <div className="mt-10 text-center">
-              <Button asChild size="lg">
-                <Link href="/book-demo">
-                  Book a demo with your use case
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>

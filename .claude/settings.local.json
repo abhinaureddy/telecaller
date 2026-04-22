@@ -11,7 +11,15 @@
       "Bash(tee /tmp/telecal-dev.log)",
       "Bash(gh auth *)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git -c user.email=abhinaureddy@gmail.com -c user.name=Abhinav commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Read(//Users/abhinav/**)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(git branch *)",
+      "Bash(git fetch *)",
+      "Bash(git -c user.email=\"abhinaureddy@gmail.com\" -c user.name=\"Abhinav\" commit -m \"Remove demo audio section from home page\")"
     ]
   }
 }
