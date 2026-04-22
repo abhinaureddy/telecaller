@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/abhinav/Downloads/IMG_6031.png)",
+      "Bash(python3 -c \"from PIL import Image; print\\('pil ok'\\)\")",
+      "Bash(sips -c 300 820 /Users/abhinav/Downloads/IMG_6031.png --out /Users/abhinav/Telecal/public/logo.png)",
+      "Bash(tee /tmp/telecal-dev.log)",
+      "Bash(gh auth *)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
