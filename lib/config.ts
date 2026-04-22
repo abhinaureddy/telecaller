@@ -10,7 +10,7 @@ export const siteConfig = {
     location: "Hyderabad, India",
   },
   calendly: {
-    url: "https://calendly.com/telecaller-ai/15min",
+    url: "https://calendly.com/abhinav-telecaller/15-minute-demo-telecaller-ai",
   },
   social: {
     linkedin: "",
