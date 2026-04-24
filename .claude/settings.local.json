@@ -19,7 +19,8 @@
       "Bash(ssh -T git@github.com)",
       "Bash(git branch *)",
       "Bash(git fetch *)",
-      "Bash(git -c user.email=\"abhinaureddy@gmail.com\" -c user.name=\"Abhinav\" commit -m \"Remove demo audio section from home page\")"
+      "Bash(git -c user.email=\"abhinaureddy@gmail.com\" -c user.name=\"Abhinav\" commit -m \"Remove demo audio section from home page\")",
+      "Bash(git -c user.email=\"abhinaureddy@gmail.com\" -c user.name=\"Abhinav\" commit -m \"Add real content for privacy, terms, DPDP, and refund policies\")"
     ]
   }
 }
