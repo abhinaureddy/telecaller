@@ -12,13 +12,27 @@ export interface FAQItem {
   a: string;
 }
 
-export function FAQAccordion({ items, idPrefix = "faq" }: { items: FAQItem[]; idPrefix?: string }) {
+export function FAQAccordion({
+  items,
+  idPrefix = "faq",
+  html = false,
+}: {
+  items: FAQItem[];
+  idPrefix?: string;
+  html?: boolean;
+}) {
   return (
     <Accordion type="single" collapsible className="w-full">
       {items.map((item, i) => (
         <AccordionItem key={`${idPrefix}-${i}`} value={`${idPrefix}-${i}`}>
           <AccordionTrigger>{item.q}</AccordionTrigger>
-          <AccordionContent>{item.a}</AccordionContent>
+          <AccordionContent>
+            {html ? (
+              <span dangerouslySetInnerHTML={{ __html: item.a }} />
+            ) : (
+              item.a
+            )}
+          </AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>
