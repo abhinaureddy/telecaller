@@ -105,11 +105,11 @@ const refusals = [
 export default function HowItWorksPage() {
   return (
     <>
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x max-w-4xl anim-fade-up">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x max-w-4xl anim-fade-up relative">
           <p className="eyebrow text-[var(--text-muted-dark)] mb-6">How it works</p>
-          <h1 className="display-xl text-white mb-7">
+          <h1 className="display-xl text-[var(--ink)] mb-7">
             How telecaller.ai <span className="gradient-brand-text italic">actually</span>{" "}
             works.
           </h1>
@@ -121,7 +121,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* 5-STEP FLOW */}
-      <section className="bg-[var(--bg-light)] section-pad">
+      <section className="bg-white/60 section-pad">
         <div className="container-x">
           <div className="max-w-2xl mb-16">
             <p className="eyebrow text-[var(--accent)] mb-5">The 5-step flow</p>
@@ -162,7 +162,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* WHAT WE BUILD */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x">
           <div className="max-w-3xl mb-14">
             <p className="eyebrow text-[var(--accent)] mb-5">What you get</p>
@@ -198,12 +198,12 @@ export default function HowItWorksPage() {
       </section>
 
       {/* WHAT WE DON'T DO */}
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x relative">
           <div className="max-w-3xl mb-14">
             <p className="eyebrow text-[var(--text-muted-dark)] mb-5">The confession</p>
-            <h2 className="display-l text-white">
+            <h2 className="display-l text-[var(--ink)]">
               What we refuse to do — and why you should care.
             </h2>
           </div>
@@ -212,11 +212,11 @@ export default function HowItWorksPage() {
             {refusals.map((r) => (
               <div
                 key={r.title}
-                className="flex items-start gap-5 p-7 lg:p-8 rounded-2xl border border-[var(--border-dark)] bg-white/[0.02]"
+                className="flex items-start gap-5 p-7 lg:p-8 rounded-2xl border border-[var(--border-dark)] bg-white/60"
               >
                 <XCircle className="w-7 h-7 text-[var(--accent)] shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-display text-2xl text-white mb-2 tracking-tight">
+                  <h3 className="font-display text-2xl text-[var(--ink)] mb-2 tracking-tight">
                     {r.title}
                   </h3>
                   <p className="text-[var(--text-muted-dark)] leading-relaxed">{r.body}</p>

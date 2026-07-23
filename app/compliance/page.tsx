@@ -82,11 +82,11 @@ const refusals = [
 export default function CompliancePage() {
   return (
     <>
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x max-w-4xl anim-fade-up">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x max-w-4xl anim-fade-up relative">
           <p className="eyebrow text-[var(--text-muted-dark)] mb-6">Compliance</p>
-          <h1 className="display-xl text-white mb-7">
+          <h1 className="display-xl text-[var(--ink)] mb-7">
             Built for{" "}
             <span className="gradient-brand-text italic">Indian</span> regulation. Not
             American regulation with an India sticker.
@@ -99,7 +99,7 @@ export default function CompliancePage() {
       </section>
 
       {/* WHY THIS MATTERS */}
-      <section className="bg-[var(--bg-light)] section-pad">
+      <section className="bg-white/60 section-pad">
         <div className="container-x max-w-3xl">
           <p className="eyebrow text-[var(--accent)] mb-5">Why this matters</p>
           <div className="prose-custom space-y-6 text-lg text-[var(--text-primary)] leading-relaxed">
@@ -120,7 +120,7 @@ export default function CompliancePage() {
       </section>
 
       {/* 6-ITEM FRAMEWORK */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x">
           <div className="max-w-3xl mb-14">
             <p className="eyebrow text-[var(--accent)] mb-5">The framework</p>
@@ -153,7 +153,7 @@ export default function CompliancePage() {
       </section>
 
       {/* WHAT THIS MEANS */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x">
           <div className="max-w-3xl mb-14">
             <p className="eyebrow text-[var(--accent)] mb-5">For you</p>
@@ -179,12 +179,12 @@ export default function CompliancePage() {
       </section>
 
       {/* WHAT WE REFUSE */}
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x relative">
           <div className="max-w-3xl mb-14">
             <p className="eyebrow text-[var(--text-muted-dark)] mb-5">Hard lines</p>
-            <h2 className="display-l text-white">
+            <h2 className="display-l text-[var(--ink)]">
               What we will not do, under any circumstances.
             </h2>
           </div>
@@ -193,7 +193,7 @@ export default function CompliancePage() {
             {refusals.map((r) => (
               <li
                 key={r}
-                className="flex items-start gap-4 p-5 rounded-xl border border-[var(--border-dark)] bg-white/[0.02]"
+                className="flex items-start gap-4 p-5 rounded-xl border border-[var(--border-dark)] bg-white/60"
               >
                 <XCircle className="w-6 h-6 text-[var(--accent)] shrink-0 mt-0.5" />
                 <span className="text-[var(--text-muted-dark)] leading-relaxed">{r}</span>

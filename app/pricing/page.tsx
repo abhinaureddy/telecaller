@@ -101,11 +101,11 @@ function CellContent({ value }: { value: CellValue }) {
 export default function PricingPage() {
   return (
     <>
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x max-w-4xl anim-fade-up">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x max-w-4xl anim-fade-up relative">
           <p className="eyebrow text-[var(--text-muted-dark)] mb-6">Pricing</p>
-          <h1 className="display-xl text-white mb-7">
+          <h1 className="display-xl text-[var(--ink)] mb-7">
             Simple, <span className="gradient-brand-text italic">predictable</span>{" "}
             pricing.
           </h1>
@@ -117,7 +117,7 @@ export default function PricingPage() {
       </section>
 
       {/* DESKTOP TABLE */}
-      <section className="bg-[var(--bg-light)] section-pad">
+      <section className="bg-white/60 section-pad">
         <div className="container-x">
           <div className="hidden lg:block">
             <div className="rounded-2xl overflow-hidden border border-[var(--border-light)] bg-white shadow-sm">
@@ -253,7 +253,7 @@ export default function PricingPage() {
       </section>
 
       {/* ALWAYS INCLUDED */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x max-w-4xl">
           <div className="mb-10">
             <p className="eyebrow text-[var(--accent)] mb-5">Always included</p>
@@ -273,7 +273,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x max-w-4xl">
           <div className="mb-10">
             <p className="eyebrow text-[var(--accent)] mb-5">Pricing FAQ</p>

@@ -19,7 +19,7 @@ const buttonVariants = cva(
         link:
           "underline underline-offset-4 text-[var(--text-muted)] hover:text-[var(--text-primary)] font-normal",
         linkDark:
-          "underline underline-offset-4 text-[var(--text-muted-dark)] hover:text-white font-normal",
+          "underline underline-offset-4 text-[var(--text-muted-dark)] hover:text-[var(--ink)] font-normal",
       },
       size: {
         sm: "h-9 px-4 text-sm rounded-full",

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Instrument_Serif, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { GlobalBackground } from "@/components/GlobalBackground";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0A0A0F",
+  themeColor: "#cfe5e0",
 };
 
 export default function RootLayout({
@@ -73,6 +74,13 @@ export default function RootLayout({
       }}
     >
       <body>
+        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
+        {/* Satoshi isn't on Google Fonts; Fontshare is its official CDN */}
+        <link
+          rel="stylesheet"
+          precedence="default"
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700&display=swap"
+        />
         <style
           dangerouslySetInnerHTML={{
             __html: `
@@ -84,6 +92,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <GlobalBackground />
         <Navbar />
         <main>{children}</main>
         <Footer />

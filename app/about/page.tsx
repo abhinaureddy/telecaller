@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x max-w-4xl anim-fade-up">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x max-w-4xl anim-fade-up relative">
           <p className="eyebrow text-[var(--text-muted-dark)] mb-6">About</p>
-          <h1 className="display-xl text-white mb-7">
+          <h1 className="display-xl text-[var(--ink)] mb-7">
             A team that&apos;s lived{" "}
             <span className="gradient-brand-text italic">Indian</span> telecalling.
           </h1>
@@ -29,7 +29,7 @@ export default function AboutPage() {
       </section>
 
       {/* OUR STORY */}
-      <section className="bg-[var(--bg-light)] section-pad">
+      <section className="bg-white/60 section-pad">
         <div className="container-x max-w-3xl">
           <p className="eyebrow text-[var(--accent)] mb-5">Our story</p>
           <h2 className="display-l text-[var(--text-primary)] mb-10">
@@ -59,7 +59,7 @@ export default function AboutPage() {
       </section>
 
       {/* FOUNDER NOTE */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x">
           <div className="grid md:grid-cols-[auto_1fr] gap-10 lg:gap-16 items-start max-w-5xl mx-auto">
             <div className="shrink-0 mx-auto md:mx-0">
@@ -126,9 +126,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x text-center max-w-3xl">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x text-center max-w-3xl relative">
           <h2 className="display-l mb-6">Want to talk directly?</h2>
           <p className="text-lg md:text-xl text-[var(--text-muted-dark)] leading-relaxed mb-10">
             Book 15 minutes on my calendar. Founder-to-founder, or founder-to-owner.

@@ -22,12 +22,12 @@ export function CTASection({
     <section
       className={
         isDark
-          ? "relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden"
-          : "relative bg-[var(--bg-light)] section-pad"
+          ? "relative text-[var(--ink)] section-pad noise-overlay overflow-hidden"
+          : "relative bg-white/60 section-pad"
       }
     >
-      {isDark && <div className="gradient-top-strip gradient-brand" />}
-      <div className="container-x text-center max-w-3xl">
+      {isDark && <div className="gradient-top-strip gradient-brand z-10" />}
+      <div className="container-x text-center max-w-3xl relative">
         <h2 className="display-l mb-6">{heading}</h2>
         {sub && (
           <p

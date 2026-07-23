@@ -45,11 +45,11 @@ export default function BlogIndexPage() {
 
   return (
     <>
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x max-w-4xl anim-fade-up">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x max-w-4xl anim-fade-up relative">
           <p className="eyebrow text-[var(--text-muted-dark)] mb-6">Blog</p>
-          <h1 className="display-xl text-white mb-7">
+          <h1 className="display-xl text-[var(--ink)] mb-7">
             AI telecalling, <span className="gradient-brand-text italic">explained</span>.
           </h1>
           <p className="text-lg md:text-xl text-[var(--text-muted-dark)] leading-relaxed max-w-3xl">
@@ -67,7 +67,7 @@ export default function BlogIndexPage() {
           <section
             key={cluster}
             className={
-              "bg-[var(--bg-light)] section-pad" +
+              "bg-white/60 section-pad" +
               (idx > 0 ? " border-t border-[var(--border-light)]" : "")
             }
           >

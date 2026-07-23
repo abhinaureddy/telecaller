@@ -16,6 +16,8 @@ import { Waveform } from "@/components/Waveform";
 import { PricingCard, type PricingTier } from "@/components/PricingCard";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
+import { TiltCard } from "@/components/TiltCard";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const trustBadges = [
   "TRAI-compliant",
@@ -185,30 +187,23 @@ const faqs: FAQItem[] = [
 export default function HomePage() {
   return (
     <>
+      <ScrollReveal />
       {/* HERO */}
-      <section className="relative bg-[var(--bg-dark)] text-white overflow-hidden noise-overlay">
-        <div className="gradient-top-strip gradient-brand" />
-        <div
-          className="absolute inset-0 pointer-events-none opacity-30"
-          style={{
-            background:
-              "radial-gradient(60% 60% at 80% 30%, rgba(128,32,144,0.28), transparent 70%), radial-gradient(50% 60% at 10% 80%, rgba(0,112,176,0.25), transparent 70%)",
-          }}
-          aria-hidden
-        />
-        <div className="container-x section-pad relative">
+      <section className="relative text-white overflow-hidden noise-overlay min-h-[calc(100svh-72px)] flex items-center">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="absolute inset-0 bg-black/30" aria-hidden />
+        <div className="container-x section-pad relative w-full">
           <div className="grid lg:grid-cols-[6fr_4fr] gap-12 lg:gap-16 items-center">
             <div className="anim-fade-up">
-              <p className="eyebrow text-[var(--text-muted-dark)] mb-6">
-                <span className="inline-block w-8 h-px bg-[var(--text-muted-dark)] align-middle mr-3" />
+              <p className="eyebrow text-white/80 mb-6">
+                <span className="inline-block w-8 h-px bg-white/60 align-middle mr-3" />
                 AI telecalling · Built in India
               </p>
-              <h1 className="display-xl text-white mb-7">
-                AI telecallers that work{" "}
-                <span className="gradient-brand-text italic">24×7</span>
-                {" "}— in Hindi, English, and your customer's language.
+              <h1 className="display-sans-xl glossy-white-text mb-7">
+                AI telecallers that work 24×7 — in Hindi, English, and your
+                customer's language.
               </h1>
-              <p className="text-lg md:text-xl text-[var(--text-muted-dark)] leading-relaxed mb-10 max-w-2xl">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-2xl">
                 Stop losing leads after office hours. Stop chasing unqualified inquiries.
                 Our AI telecallers answer every call, qualify every lead, and hand the hot
                 ones to your sales team — instantly.
@@ -234,14 +229,15 @@ export default function HomePage() {
             </div>
 
             <div className="relative anim-scale-in delay-200">
-              <div className="relative rounded-3xl border border-[var(--border-dark)] bg-gradient-to-br from-white/[0.04] to-transparent p-8 backdrop-blur-sm">
+              <TiltCard maxTilt={10} radiusClassName="rounded-3xl">
+              <div className="relative rounded-3xl border border-white/70 bg-white/50 p-8 backdrop-blur-sm">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-2.5">
                     <span className="relative flex h-2.5 w-2.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--success)] opacity-75" />
                       <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[var(--success)]" />
                     </span>
-                    <span className="font-mono text-xs text-white tracking-wider uppercase">
+                    <span className="font-mono text-xs text-[var(--ink)] tracking-wider uppercase">
                       Live call
                     </span>
                   </div>
@@ -257,7 +253,7 @@ export default function HomePage() {
                     <span className="font-mono text-[10px] text-[var(--text-muted-dark)] pt-1 shrink-0">
                       AI
                     </span>
-                    <p className="text-white/90 leading-snug">
+                    <p className="text-[var(--ink)] leading-snug">
                       Namaste, main Priya bol rahi hoon telecaller.ai se. Aapne hamari
                       property ke baare mein inquiry ki thi?
                     </p>
@@ -274,12 +270,13 @@ export default function HomePage() {
                     <span className="font-mono text-[10px] text-[var(--text-muted-dark)] pt-1 shrink-0">
                       AI
                     </span>
-                    <p className="text-white/90 leading-snug">
+                    <p className="text-[var(--ink)] leading-snug">
                       Perfect. Budget range kitna rehega, aur when are you looking to move?
                     </p>
                   </div>
                 </div>
               </div>
+              </TiltCard>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full gradient-brand opacity-40 blur-2xl" aria-hidden />
             </div>
           </div>
@@ -287,9 +284,9 @@ export default function HomePage() {
       </section>
 
       {/* PROBLEM */}
-      <section className="bg-[var(--bg-light)] section-pad">
+      <section className="bg-white/60 section-pad">
         <div className="container-x">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-16" data-reveal>
             <p className="eyebrow text-[var(--accent)] mb-5">The problem</p>
             <h2 className="display-l text-[var(--text-primary)] mb-8">
               Your telecalling team is losing you money — and you already know it.
@@ -302,18 +299,17 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8" data-reveal>
             {problemStats.map((s, i) => (
-              <div
-                key={s.stat}
-                className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-[var(--border-light)] relative overflow-hidden group hover:shadow-lg transition-shadow"
-              >
-                <p className="eyebrow text-[var(--text-muted)] mb-3">
-                  {String(i + 1).padStart(2, "0")}
-                </p>
-                <p className="stat-numeric gradient-brand-text mb-6">{s.stat}</p>
-                <p className="text-[var(--text-primary)] leading-relaxed">{s.label}</p>
-              </div>
+              <TiltCard key={s.stat} className="h-full">
+                <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-[var(--border-light)] relative overflow-hidden group hover:shadow-lg transition-shadow h-full">
+                  <p className="eyebrow text-[var(--text-muted)] mb-3">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <p className="stat-numeric gradient-brand-text mb-6">{s.stat}</p>
+                  <p className="text-[var(--text-primary)] leading-relaxed">{s.label}</p>
+                </div>
+              </TiltCard>
             ))}
           </div>
 
@@ -325,34 +321,33 @@ export default function HomePage() {
       </section>
 
       {/* AGENTS */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x">
-          <div className="max-w-3xl mb-14">
+          <div className="max-w-3xl mb-14" data-reveal>
             <p className="eyebrow text-[var(--accent)] mb-5">What we deploy</p>
             <h2 className="display-l text-[var(--text-primary)]">
               Three AI telecallers. Three jobs. One outcome: no lead left behind.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8" data-reveal>
             {agents.map((a) => {
               const Icon = a.icon;
               return (
-                <article
-                  key={a.title}
-                  className="bg-white rounded-2xl p-8 border border-[var(--border-light)] shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--accent-light)] text-[var(--accent)] mb-6">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="font-display text-2xl md:text-[1.75rem] text-[var(--text-primary)] mb-2 tracking-tight">
-                    {a.title}
-                  </h3>
-                  <p className="italic text-[var(--accent)] mb-5 text-[0.95rem]">
-                    {a.tagline}
-                  </p>
-                  <p className="text-[var(--text-muted)] leading-relaxed">{a.description}</p>
-                </article>
+                <TiltCard key={a.title} className="h-full">
+                  <article className="bg-white rounded-2xl p-8 border border-[var(--border-light)] shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--accent-light)] text-[var(--accent)] mb-6">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="font-display text-2xl md:text-[1.75rem] text-[var(--text-primary)] mb-2 tracking-tight">
+                      {a.title}
+                    </h3>
+                    <p className="italic text-[var(--accent)] mb-5 text-[0.95rem]">
+                      {a.tagline}
+                    </p>
+                    <p className="text-[var(--text-muted)] leading-relaxed">{a.description}</p>
+                  </article>
+                </TiltCard>
               );
             })}
           </div>
@@ -369,16 +364,16 @@ export default function HomePage() {
       </section>
 
       {/* FIT */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x">
-          <div className="max-w-3xl mb-14">
+          <div className="max-w-3xl mb-14" data-reveal>
             <p className="eyebrow text-[var(--accent)] mb-5">Qualification</p>
             <h2 className="display-l text-[var(--text-primary)]">
               Is this a fit for your business?
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-16" data-reveal>
             <div>
               <h3 className="font-sans font-semibold text-lg text-[var(--success)] mb-6 tracking-tight">
                 This works well for:
@@ -415,35 +410,34 @@ export default function HomePage() {
       </section>
 
       {/* WHY US */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x">
-          <div className="max-w-3xl mb-14">
+          <div className="max-w-3xl mb-14" data-reveal>
             <p className="eyebrow text-[var(--accent)] mb-5">Why us</p>
             <h2 className="display-l text-[var(--text-primary)]">
               Why businesses choose telecaller.ai over building it themselves.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8" data-reveal>
             {whyUs.map((w) => {
               const Icon = w.icon;
               return (
-                <div
-                  key={w.title}
-                  className="bg-white rounded-2xl p-8 lg:p-10 border border-[var(--border-light)] shadow-sm"
-                >
-                  <div className="flex items-start gap-5">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--accent-light)] text-[var(--accent)] shrink-0">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-2xl md:text-[1.625rem] text-[var(--text-primary)] mb-3 tracking-tight">
-                        {w.title}
-                      </h3>
-                      <p className="text-[var(--text-muted)] leading-relaxed">{w.body}</p>
+                <TiltCard key={w.title} className="h-full" maxTilt={5}>
+                  <div className="bg-white rounded-2xl p-8 lg:p-10 border border-[var(--border-light)] shadow-sm h-full">
+                    <div className="flex items-start gap-5">
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--accent-light)] text-[var(--accent)] shrink-0">
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-display text-2xl md:text-[1.625rem] text-[var(--text-primary)] mb-3 tracking-tight">
+                          {w.title}
+                        </h3>
+                        <p className="text-[var(--text-muted)] leading-relaxed">{w.body}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </TiltCard>
               );
             })}
           </div>
@@ -451,18 +445,20 @@ export default function HomePage() {
       </section>
 
       {/* PRICING PREVIEW */}
-      <section className="bg-[var(--bg-light)] section-pad">
+      <section className="bg-white/60 section-pad">
         <div className="container-x">
-          <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="max-w-3xl mx-auto text-center mb-14" data-reveal>
             <p className="eyebrow text-[var(--accent)] mb-5">Pricing</p>
             <h2 className="display-l text-[var(--text-primary)]">
               Simple pricing. No seat fees. No per-call charges.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch" data-reveal>
             {tiers.map((t) => (
-              <PricingCard key={t.name} tier={t} />
+              <TiltCard key={t.name} className="h-full" maxTilt={5}>
+                <PricingCard tier={t} />
+              </TiltCard>
             ))}
           </div>
 
@@ -481,9 +477,9 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+      <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
         <div className="container-x">
-          <div className="grid lg:grid-cols-[2fr_3fr] gap-12 lg:gap-20">
+          <div className="grid lg:grid-cols-[2fr_3fr] gap-12 lg:gap-20" data-reveal>
             <div>
               <p className="eyebrow text-[var(--accent)] mb-5">FAQ</p>
               <h2 className="display-l text-[var(--text-primary)] mb-6">

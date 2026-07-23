@@ -37,9 +37,9 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "sticky top-0 z-40 w-full bg-black/85 backdrop-blur-md transition-all duration-300 border-b",
+          "sticky top-0 z-40 w-full bg-white/85 backdrop-blur-md transition-all duration-300 border-b",
           scrolled
-            ? "border-[var(--border-dark)] py-3"
+            ? "border-[var(--border-light)] py-3"
             : "border-transparent py-4"
         )}
       >
@@ -48,10 +48,10 @@ export function Navbar() {
             <Image
               src="/logo.png"
               alt="telecaller.ai"
-              width={820}
-              height={300}
+              width={661}
+              height={149}
               priority
-              className="h-8 md:h-9 w-auto"
+              className="h-9 md:h-11 w-auto"
             />
           </Link>
 
@@ -60,7 +60,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-[var(--text-muted-dark)] hover:text-white transition-colors"
+                className="text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
               >
                 {item.label}
               </Link>
@@ -76,7 +76,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-[var(--border-dark)] text-white"
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-[var(--border-light)] text-[var(--text-primary)]"
             aria-label="Open menu"
           >
             <Menu className="w-5 h-5" />
@@ -85,14 +85,14 @@ export function Navbar() {
       </header>
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-black text-white flex flex-col anim-fade-up">
+        <div className="fixed inset-0 z-50 bg-[var(--bg-light)] text-[var(--text-primary)] flex flex-col anim-fade-up">
           <div className="container-x flex items-center justify-between py-4">
             <Image
               src="/logo.png"
               alt="telecaller.ai"
-              width={820}
-              height={300}
-              className="h-8 w-auto"
+              width={661}
+              height={149}
+              className="h-9 w-auto"
             />
             <button
               type="button"
@@ -109,7 +109,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="font-display text-5xl text-white hover:text-[var(--text-muted-dark)] transition-colors"
+                className="font-display text-5xl text-[var(--text-primary)] hover:text-[var(--text-muted)] transition-colors"
               >
                 {item.label}
               </Link>

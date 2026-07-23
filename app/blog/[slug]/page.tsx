@@ -116,13 +116,13 @@ export default async function BlogPostPage({
       />
 
       {/* HERO */}
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x max-w-4xl anim-fade-up">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x max-w-4xl anim-fade-up relative">
           <p className="eyebrow text-[var(--text-muted-dark)] mb-6">
             {CLUSTER_LABELS[post.cluster]}
           </p>
-          <h1 className="display-l text-white mb-8">{post.heading}</h1>
+          <h1 className="display-l text-[var(--ink)] mb-8">{post.heading}</h1>
 
           <div className="flex items-center gap-4">
             <div className="relative shrink-0">
@@ -133,7 +133,7 @@ export default async function BlogPostPage({
               </div>
             </div>
             <div className="text-sm text-[var(--text-muted-dark)]">
-              <span className="text-white font-medium">Abhinav</span>, Founder ·
+              <span className="text-[var(--ink)] font-medium">Abhinav</span>, Founder ·
               telecaller.ai
               <span className="mx-2">·</span>
               <span>July 2, 2026</span>
@@ -148,7 +148,7 @@ export default async function BlogPostPage({
       </section>
 
       {/* BODY */}
-      <section className="bg-[var(--bg-light)] section-pad">
+      <section className="bg-white/60 section-pad">
         <div className="container-x max-w-3xl">
           <div
             className="article-prose"
@@ -159,7 +159,7 @@ export default async function BlogPostPage({
 
       {/* FAQ */}
       {post.faqs.length > 0 && (
-        <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+        <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
           <div className="container-x max-w-3xl">
             <p className="eyebrow text-[var(--accent)] mb-5">FAQ</p>
             <h2 className="display-m text-[var(--text-primary)] mb-8">
@@ -172,7 +172,7 @@ export default async function BlogPostPage({
 
       {/* KEEP READING */}
       {related.length > 0 && (
-        <section className="bg-[var(--bg-light)] section-pad border-t border-[var(--border-light)]">
+        <section className="bg-white/60 section-pad border-t border-[var(--border-light)]">
           <div className="container-x max-w-3xl">
             <p className="eyebrow text-[var(--accent)] mb-8">Keep reading</p>
             <div className="grid sm:grid-cols-2 gap-6">

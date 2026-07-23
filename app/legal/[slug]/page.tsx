@@ -42,11 +42,11 @@ export default async function LegalPage({
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-[var(--bg-dark)] text-white section-pad noise-overlay overflow-hidden">
-        <div className="gradient-top-strip gradient-brand" />
-        <div className="container-x max-w-4xl anim-fade-up">
+      <section className="relative text-[var(--ink)] section-pad noise-overlay overflow-hidden">
+        <div className="gradient-top-strip gradient-brand z-10" />
+        <div className="container-x max-w-4xl anim-fade-up relative">
           <p className="eyebrow text-[var(--text-muted-dark)] mb-6">Legal</p>
-          <h1 className="display-l text-white mb-6">{doc.title}</h1>
+          <h1 className="display-l text-[var(--ink)] mb-6">{doc.title}</h1>
           <p className="text-lg text-[var(--text-muted-dark)] leading-relaxed max-w-3xl mb-6">
             {doc.subtitle}
           </p>
@@ -57,7 +57,7 @@ export default async function LegalPage({
       </section>
 
       {/* CONTENT */}
-      <section className="bg-[var(--bg-light)] section-pad">
+      <section className="bg-white/60 section-pad">
         <div className="container-x">
           <div className="grid lg:grid-cols-[1fr_3fr] gap-12 lg:gap-16">
             {/* TOC / sibling nav */}

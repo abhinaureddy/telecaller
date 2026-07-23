@@ -25,7 +25,7 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-[var(--bg-dark)] text-[var(--text-on-dark)] relative">
+    <footer className="bg-white/40 text-[var(--text-on-dark)] relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-[var(--border-dark)]" />
       <div className="container-x pt-20 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
@@ -36,7 +36,7 @@ export function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-white/80 hover:text-white transition-colors"
+                    className="text-sm text-[var(--text-muted-dark)] hover:text-[var(--ink)] transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -52,7 +52,7 @@ export function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-white/80 hover:text-white transition-colors"
+                    className="text-sm text-[var(--text-muted-dark)] hover:text-[var(--ink)] transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -68,7 +68,7 @@ export function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-white/80 hover:text-white transition-colors"
+                    className="text-sm text-[var(--text-muted-dark)] hover:text-[var(--ink)] transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -79,11 +79,11 @@ export function Footer() {
 
           <div>
             <h4 className="eyebrow text-[var(--text-muted-dark)] mb-5">Contact</h4>
-            <ul className="space-y-3 text-sm text-white/80">
+            <ul className="space-y-3 text-sm text-[var(--text-muted-dark)]">
               <li>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[var(--ink)] transition-colors"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -91,7 +91,7 @@ export function Footer() {
               <li>
                 <a
                   href={siteConfig.contact.phoneHref}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[var(--ink)] transition-colors"
                 >
                   {siteConfig.contact.phone}
                 </a>
@@ -101,7 +101,7 @@ export function Footer() {
                   href={siteConfig.contact.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1.5 hover:text-[var(--ink)] transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp us
@@ -119,9 +119,9 @@ export function Footer() {
             <Image
               src="/logo.png"
               alt="telecaller.ai"
-              width={820}
-              height={300}
-              className="h-7 w-auto"
+              width={661}
+              height={149}
+              className="h-9 w-auto"
             />
           </div>
           <p className="text-xs text-[var(--text-muted-dark)] tracking-wide">
